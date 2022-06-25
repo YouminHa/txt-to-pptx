@@ -17,7 +17,7 @@ pip install python-pptx
 - Make txt file of lyrics, separated by blank line for each slide.
 - run txt-to-pptx.py
 ```
-python3 txt-to-pptx.py -t <template.pptx> -i <input.txt> -o <output.pptx>
+python txt-to-pptx.py -t <template.pptx> -i <input.txt> -o <output.pptx>
 ```
 - Open Propresenter 7 in Mac,
   - click 'File-Import-Powerpoint',
