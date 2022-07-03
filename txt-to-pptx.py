@@ -39,13 +39,14 @@ def read_lyrics(input_txt_path):
         trans_line = []
     else:
       trans_line.append(l)
-
   f.close()
 
   return lyrics
 
 
 def convert(template_ppt_path, input_txt_path, output_ppt_path):
+  print("Convert {} to {}".format(input_txt_path, output_ppt_path))
+
   p = pptx.Presentation(template_ppt_path)
 
   src_slide = p.slides[0]
@@ -68,8 +69,7 @@ def convert(template_ppt_path, input_txt_path, output_ppt_path):
 
     # copy text into slide shapes
     for line_idx in range(min(len(trans_line), len(slide.shapes))):
-      # DEBUG
-      print("slide {}, text {} : {}".format(slide_idx, line_idx, trans_line[line_idx]))
+      print("  slide #{}, text #{} : {}".format(slide_idx, line_idx, trans_line[line_idx]))
 
       # put the text into shape.text_frame.paragraph.text
       shape = slide.shapes[line_idx]
