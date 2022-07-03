@@ -9,6 +9,13 @@ Propresenter 7 is able to import pptx files with the option of 'get text and gra
 
 
 ## Usage
+- Install python and pip
+  - For Mac
+    - install Homebrew first. https://brew.sh
+    - Install python and pip
+```
+brew install python pip
+```
 - Install python-pptx
 ```
 pip install python-pptx
